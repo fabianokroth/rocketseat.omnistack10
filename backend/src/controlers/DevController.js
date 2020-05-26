@@ -17,6 +17,18 @@ module.exports = {
         return response.json(devs);
     },
 
+    async destroy(request, response) {
+        const github_username = request.params.name;
+
+        const user = await Dev.findOne({ github_username });
+        if (user) {
+            await Dev.deleteOne({ github_username });
+            return response.json({ status: true, message: `Usuário ${github_username} excluído com sucesso` });
+        } else {
+            return response.json({ status: false, message: `Usuário ${github_username} não encontrado` });
+        }
+    },
+
     async store(request, response) {
         const { github_username, techs, latitude, longitude } = request.body;
 
