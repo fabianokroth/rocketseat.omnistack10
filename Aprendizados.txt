@@ -1,0 +1,24 @@
+Extras
+	Mongo Atlas - serve para obter um banco mongo na nuvem
+		usando o código GETATLAS ganho $100.00 free para usar a ferramenta
+
+Extras VsCode
+	Express - framework node para facilitar desenvolvimento
+	Nodemon - ao salvar recarrega a aplicação automático
+	Axios - biblioteca para interagir com chamadas http
+	Mongoose - biblioteca para se trabalhar com o Mongo
+
+Gerenciador de Pacotes
+	Instalado o yarn
+
+Todo pacote pode ter um "package.json"
+	arquivo com configurações de funcionamento
+
+package.json do diretório principal
+	"scripts": {
+		"dev": "nodemon src/index.js"
+	  },
+	ao iniciar a aplicação basta usar "yarn dev"
+		é uma alias para a configuração mencionada
+
+
