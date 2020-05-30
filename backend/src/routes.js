@@ -13,10 +13,11 @@ const routes = Router();
 // Route Params: request.params (Identificar um recurso na alteração ou remoção)
 // Body: request.body (Dados para criação ou alteração de um registro)
 
-routes.get('/devs', DevController.index);
-routes.post('/devs', DevController.store);
-routes.delete('/devs/delete/:name', DevController.destroy);
-
-routes.get('/search', SearchController.index);
+routes
+    .get('/devs', DevController.index)
+    .post('/devs', DevController.store)
+    .post('/devs/update', DevController.update)
+    .delete('/devs/delete/:name', DevController.destroy)
+    .get('/search', SearchController.index);
 
 module.exports = routes;
