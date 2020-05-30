@@ -3,6 +3,7 @@ const { Router } = require('express');
 // quando eu inform o { Router } é apenas uma package do express
 const DevController = require('./controlers/DevController');
 const SearchController = require('./controlers/SearchController');
+const SearchControllerTechs = require('./controlers/SearchControllerTechs');
 
 const routes = Router();
 
@@ -18,6 +19,7 @@ routes
     .post('/devs', DevController.store)
     .post('/devs/update', DevController.update)
     .delete('/devs/delete/:name', DevController.destroy)
+    .get('/search/techs', SearchControllerTechs.index)
     .get('/search', SearchController.index);
 
 module.exports = routes;
